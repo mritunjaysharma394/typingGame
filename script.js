@@ -20,7 +20,7 @@ const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 
-document.getElementById('start').addEventListener('click', ()=> {
+document.getElementById('start').addEventListener('click', () => {
 
 	//random quote index
 	const quoteIndex = Math.floor(Math.random() * quotes.length);
@@ -30,7 +30,7 @@ document.getElementById('start').addEventListener('click', ()=> {
 	//reset wordIndex for tracking
 	wordIndex = 0;
 
-	const spanWords = words.map(function(word) {
+	const spanWords = words.map(function (word) {
 		return `<span>${word} </span>`
 	});
 
@@ -47,13 +47,13 @@ document.getElementById('start').addEventListener('click', ()=> {
 	startTime = new Date().getTime();
 });
 
-typedValueElement.addEventListener('input', ()=>{
+typedValueElement.addEventListener('input', () => {
 
 	const currentWord = words[wordIndex];
 
 	const typedValue = typedValueElement.value;
 
-	if(typedValue === currentWord && wordIndex === words.length - 1) {
+	if (typedValue === currentWord && wordIndex === words.length - 1) {
 		//end of the quote.Display success
 		const elapsedTime = new Date().getTime() - startTime;
 		const message = `CONGRATS! You finished in ${elapsedTime/1000} seconds.`;
@@ -71,7 +71,7 @@ typedValueElement.addEventListener('input', ()=>{
 		}
 		//highlight the new word
 		quoteElement.childNodes[wordIndex].className = 'highlight';
-	} else if(currentWord.startsWith(typedValue)) {
+	} else if (currentWord.startsWith(typedValue)) {
 		//currently correct
 		typedValueElement.className = '';
 	} else {

@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+     padding: 0.5rem 1rem;
+}
+
+.container-center {
+    margin: auto;
+    max-width: 500px;
+}
+
 .highlight {
     background-color: yellow;
 }
@@ -5,4 +20,21 @@
 .error {
     background-color: lightcoral;
     border: red;
+}
+
+#typed-value {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    display: block;
+    margin-top: 1rem;
+    border: #2ea44f solid;
+    border-radius: 0.5rem;
+    padding: 0.25rem 1rem;
+    outline: none;
+    cursor: pointer;
+    background-color:#2ea44f;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
