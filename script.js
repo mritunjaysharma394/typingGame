@@ -56,8 +56,8 @@ typedValueElement.addEventListener('input', function type() {
 	if (typedValue === currentWord && wordIndex === words.length - 1) {
 		//end of the quote.Display success
 		const elapsedTime = new Date().getTime() - startTime;
-		const message = `CONGRATS! You finished in ${elapsedTime/1000} seconds.`;
-		messageElement.innerText = message;
+		const message = `<strong>CONGRATS!</strong> You finished in <strong>${elapsedTime/1000}</strong> seconds.`;
+		messageElement.innerHTML = message;
 		//disable text on completion.
 		document.getElementById('typed-value').disabled = true
 		//event listening disabled on success.

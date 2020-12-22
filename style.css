@@ -45,3 +45,31 @@ button {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+
+#quote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 0em;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+#quote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer-header {
+    padding: 1rem 8rem;
+    bottom: 10%;
+    text-align: center;
+    position: fixed;
+}
