@@ -47,7 +47,7 @@ document.getElementById('start').addEventListener('click', () => {
 	startTime = new Date().getTime();
 });
 
-typedValueElement.addEventListener('input', () => {
+typedValueElement.addEventListener('input', function type() {
 
 	const currentWord = words[wordIndex];
 
@@ -58,6 +58,10 @@ typedValueElement.addEventListener('input', () => {
 		const elapsedTime = new Date().getTime() - startTime;
 		const message = `CONGRATS! You finished in ${elapsedTime/1000} seconds.`;
 		messageElement.innerText = message;
+		//disable text on completion.
+		document.getElementById('typed-value').disabled = true
+		//event listening disabled on success.
+		typedValueElement.removeEventListener('input', type);
 	} else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
 		//end of the word
 		//clear the typedValueElement for the new word
