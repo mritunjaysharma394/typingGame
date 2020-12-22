@@ -69,7 +69,8 @@ a {
 
 .footer-header {
     padding: 1rem 8rem;
-    bottom: 10%;
+    bottom: 0%;
     text-align: center;
-    position: fixed;
+    position: absolute;
+
 }
