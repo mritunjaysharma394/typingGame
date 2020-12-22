@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-     padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .container-center {
@@ -34,7 +34,7 @@ button {
     padding: 0.25rem 1rem;
     outline: none;
     cursor: pointer;
-    background-color:#2ea44f;
+    background-color: #2ea44f;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
