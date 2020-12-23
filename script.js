@@ -22,6 +22,7 @@ const typedValueElement = document.getElementById('typed-value');
 
 document.getElementById('start').addEventListener('click', () => {
 
+	document.getElementById('typed-value').disabled = false;
 	//random quote index
 	const quoteIndex = Math.floor(Math.random() * quotes.length);
 	const quote = quotes[quoteIndex];
@@ -51,6 +52,7 @@ typedValueElement.addEventListener('input', function type() {
 
 	const currentWord = words[wordIndex];
 
+
 	const typedValue = typedValueElement.value;
 
 	if (typedValue === currentWord && wordIndex === words.length - 1) {
@@ -61,7 +63,7 @@ typedValueElement.addEventListener('input', function type() {
 		//disable text on completion.
 		document.getElementById('typed-value').disabled = true
 		//event listening disabled on success.
-		typedValueElement.removeEventListener('input', type);
+
 	} else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
 		//end of the word
 		//clear the typedValueElement for the new word
